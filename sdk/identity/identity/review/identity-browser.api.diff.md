@@ -7,7 +7,7 @@ For the complete API surface, see the corresponding -node.api.md file.
 ===================================================================
 --- NodeJS
 +++ browser
-@@ -64,13 +64,14 @@
+@@ -66,13 +66,14 @@
  export interface AuthorityValidationOptions {
      disableInstanceDiscovery?: boolean;
  }
@@ -24,7 +24,7 @@ For the complete API surface, see the corresponding -node.api.md file.
  
  // @public
  export interface AuthorizationCodeCredentialOptions extends MultiTenantTokenCredentialOptions, AuthorityValidationOptions {
-@@ -86,10 +87,11 @@
+@@ -88,10 +89,11 @@
  }
  
  // @public
@@ -38,7 +38,7 @@ For the complete API surface, see the corresponding -node.api.md file.
  
  // @public
  export interface AzureCliCredentialOptions extends MultiTenantTokenCredentialOptions {
-@@ -99,10 +101,11 @@
+@@ -101,10 +103,11 @@
  }
  
  // @public
@@ -52,7 +52,7 @@ For the complete API surface, see the corresponding -node.api.md file.
  
  // @public
  export interface AzureDeveloperCliCredentialOptions extends MultiTenantTokenCredentialOptions {
-@@ -111,20 +114,22 @@
+@@ -113,20 +116,22 @@
  }
  
  // @public
@@ -79,7 +79,7 @@ For the complete API surface, see the corresponding -node.api.md file.
  
  // @public
  export interface AzurePowerShellCredentialOptions extends MultiTenantTokenCredentialOptions {
-@@ -173,22 +178,22 @@
+@@ -175,22 +180,22 @@
  }
  
  // @public
@@ -108,7 +108,7 @@ For the complete API surface, see the corresponding -node.api.md file.
  
  // @public
  export interface ClientCertificateCredentialOptions extends MultiTenantTokenCredentialOptions, CredentialPersistenceOptions, AuthorityValidationOptions {
-@@ -212,9 +217,9 @@
+@@ -214,9 +219,9 @@
  
  // @public
  export class ClientSecretCredential implements TokenCredential {
@@ -119,7 +119,7 @@ For the complete API surface, see the corresponding -node.api.md file.
  
  // @public
  export interface ClientSecretCredentialOptions extends MultiTenantTokenCredentialOptions, CredentialPersistenceOptions, AuthorityValidationOptions {
-@@ -236,11 +241,11 @@
+@@ -238,11 +243,11 @@
  export const CredentialUnavailableErrorName = "CredentialUnavailableError";
  
  // @public
@@ -134,7 +134,7 @@ For the complete API surface, see the corresponding -node.api.md file.
  
  // @public
  export interface DefaultAzureCredentialClientIdOptions extends DefaultAzureCredentialOptions {
-@@ -267,11 +272,11 @@
+@@ -269,11 +274,11 @@
  export function deserializeAuthenticationRecord(serializedRecord: string): AuthenticationRecord;
  
  // @public
@@ -149,7 +149,7 @@ For the complete API surface, see the corresponding -node.api.md file.
  
  // @public
  export interface DeviceCodeCredentialOptions extends InteractiveCredentialOptions, CredentialPersistenceOptions {
-@@ -291,10 +296,11 @@
+@@ -293,10 +298,11 @@
  export type DeviceCodePromptCallback = (deviceCodeInfo: DeviceCodeInfo) => void;
  
  // @public
@@ -163,7 +163,7 @@ For the complete API surface, see the corresponding -node.api.md file.
  
  // @public
  export interface EnvironmentCredentialOptions extends MultiTenantTokenCredentialOptions, AuthorityValidationOptions {
-@@ -330,9 +336,9 @@
+@@ -332,9 +338,9 @@
  export type IdentityPlugin = (context: unknown) => void;
  
  // @public
@@ -174,7 +174,7 @@ For the complete API surface, see the corresponding -node.api.md file.
      getToken(scopes: string | string[], options?: GetTokenOptions): Promise<AccessToken>;
  }
  
-@@ -361,15 +367,13 @@
+@@ -363,15 +369,13 @@
  
  // @public
  export const logger: AzureLogger;
@@ -194,7 +194,7 @@ For the complete API surface, see the corresponding -node.api.md file.
  
  // @public
  export interface ManagedIdentityCredentialClientIdOptions extends TokenCredentialOptions {
-@@ -392,12 +396,11 @@
+@@ -394,12 +398,11 @@
  }
  
  // @public
@@ -210,7 +210,7 @@ For the complete API surface, see the corresponding -node.api.md file.
  
  // @public
  export interface OnBehalfOfCredentialAssertionOptions {
-@@ -447,25 +450,26 @@
+@@ -449,25 +452,26 @@
          enableUnsafeSupportLogging?: boolean;
      };
  }
@@ -244,7 +244,7 @@ For the complete API surface, see the corresponding -node.api.md file.
  
  // @public
  export interface VisualStudioCodeCredentialOptions extends MultiTenantTokenCredentialOptions {
-@@ -473,10 +477,10 @@
+@@ -475,10 +479,10 @@
  }
  
  // @public

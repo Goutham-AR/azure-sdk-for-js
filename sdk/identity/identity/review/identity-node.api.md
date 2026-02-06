@@ -47,8 +47,10 @@ export interface AuthenticationRecord {
 // @public
 export class AuthenticationRequiredError extends Error {
     constructor(
-    options: AuthenticationRequiredErrorOptions);
+    options: AuthenticationRequiredErrorOptions, innerError?: Error);
     getTokenOptions?: GetTokenOptions;
+    // (undocumented)
+    inner: Error | undefined;
     scopes: string[];
 }
 
