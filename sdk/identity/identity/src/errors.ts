@@ -215,6 +215,8 @@ export interface AuthenticationRequiredErrorOptions {
  * Error used to enforce authentication after trying to retrieve a token silently.
  */
 export class AuthenticationRequiredError extends Error {
+  // For testing
+  inner: Error | undefined = undefined;
   /**
    * The list of scopes for which the token will have access.
    */
@@ -229,10 +231,12 @@ export class AuthenticationRequiredError extends Error {
      * Optional parameters. A message can be specified. The {@link GetTokenOptions} of the request can also be specified to more easily associate the error with the received parameters.
      */
     options: AuthenticationRequiredErrorOptions,
+    innerError?: Error,
   ) {
     super(options.message, options.cause ? { cause: options.cause } : undefined);
     this.scopes = options.scopes;
     this.getTokenOptions = options.getTokenOptions;
     this.name = "AuthenticationRequiredError";
+    this.inner = innerError;
   }
 }
